@@ -1,2 +1,2 @@
 # .dotfiles
- dot config files
+My dot config files MacOS

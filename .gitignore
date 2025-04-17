@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+*.log
+tmp/
+.zsh_sessions/
+.zsh_history
+.zcompdump
+.zcompcache/
+__pycache__/
