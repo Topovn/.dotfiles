@@ -7,3 +7,7 @@ tmp/
 .zcompdump
 .zcompcache/
 __pycache__/
+raycast/
+enconvo/
+fish/
+uv/

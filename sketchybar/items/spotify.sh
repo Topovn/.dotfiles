@@ -3,7 +3,7 @@
 COLOR="$ORANGE"
 
 sketchybar --add item spotify q \
-	--set spotify \
+	--set spotify "${spotify[@]}" \
 	scroll_texts=on \
 	icon=󰎆 \
 	icon.color="$COLOR" \
@@ -20,4 +20,4 @@ sketchybar --add item spotify q \
 	associated_display=active \
 	updates=on \
 	script="$PLUGIN_DIR/spotify.sh" \
-	--subscribe spotify media_change
+	--subscribe spotify system_woke media_change
