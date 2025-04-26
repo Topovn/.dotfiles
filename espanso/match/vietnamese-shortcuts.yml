@@ -1,0 +1,68 @@
+name: vietnamese-shortcuts
+package-author: Topovn
+parent: default
+
+matches:
+
+# Vietnamese shortcuts
+
+- trigger: bnh\ 
+  replace: bao nhiêu
+- trigger: bth\
+  replace: bình thường
+- trigger: cbi\
+  replace: chuẩn bị
+- trigger: cmnm\
+  replace: Chúc mừng năm mới
+- trigger: cx\
+  replace: cũng
+- trigger: đc\
+  replace: được
+- trigger: đk\
+  replace: đúng không
+- trigger: hnay\
+  replace: hôm nay
+- trigger: hnhu\
+  replace: hình như
+- trigger: hq\
+  replace: hôm qua
+- trigger: ko\
+  replace: không
+- trigger: kcj\
+  replace: không có gì
+- trigger: mng\
+  replace: mọi người
+- trigger: ms\
+  replace: mới
+- trigger: nc\
+  replace: nước
+- trigger: ns\
+  replace: nói
+- trigger: nch\
+  replace: nói chung
+- trigger: nchl\
+  replace: nói chung là
+- trigger: ng\
+  replace: người
+- trigger: ngc\
+  replace: ngược
+- trigger: nh\
+  replace: nhiều
+- trigger: nhg\
+  replace: nhưng
+- trigger: nn\
+  replace: ngủ ngon
+- trigger: nma\
+  replace: nhưng mà
+- trigger: ntn\
+  replace: như thế nà
+- trigger: nx\
+  replace: nữa
+- trigger: pk\
+  replace: phải không
+- trigger: tgian\
+  replace: thời gian
+- trigger: trc\
+  replace: trước
+- trigger: trl\
+  replace: trả lời
