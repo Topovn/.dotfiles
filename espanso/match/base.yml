@@ -24,8 +24,8 @@ matches:
   #       type: date
   #       params:
   #         format: "%m/%d/%Y"
-  - trigger: ":date"
-    replace: "%d/%m/%Y"
+  # - trigger: ":date"
+  #   replace: "%d/%m/%Y"
 
   # Print the output of a shell command
   - trigger: ":shell"
