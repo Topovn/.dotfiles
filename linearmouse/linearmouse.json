@@ -2,58 +2,58 @@
   "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
+      "pointer" : {
+        "speed" : 0.75,
+        "acceleration" : 0,
+        "disableAcceleration" : false
+      },
       "scrolling" : {
-        "distance" : {
-          "vertical" : 3
-        },
-        "acceleration" : {
-          "vertical" : 1
-        },
         "speed" : {
           "vertical" : 0
         },
         "reverse" : {
           "vertical" : true
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "acceleration" : {
+          "vertical" : 1
         }
       },
       "if" : {
         "device" : {
-          "productID" : "0xc092",
-          "category" : "mouse",
-          "vendorID" : "0x46d",
           "productName" : "G102 LIGHTSYNC Gaming Mouse",
-          "serialNumber" : "207236924B32"
+          "serialNumber" : "207236924B32",
+          "productID" : "0xc092",
+          "vendorID" : "0x46d",
+          "category" : "mouse"
         }
-      },
-      "pointer" : {
-        "disableAcceleration" : false,
-        "acceleration" : 0,
-        "speed" : 0.75
       }
     },
     {
+      "pointer" : {
+        "acceleration" : 1.7,
+        "disableAcceleration" : true
+      },
       "scrolling" : {
-        "reverse" : {
-          "vertical" : true
-        },
         "distance" : {
-          "vertical" : 3
+          "vertical" : 4
         },
         "acceleration" : {
           "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
         },
         "speed" : {
           "vertical" : 0
         }
       },
-      "pointer" : {
-        "disableAcceleration" : true,
-        "acceleration" : 1.7
-      },
       "if" : {
         "device" : {
-          "productID" : "0xd031",
           "category" : "mouse",
+          "productID" : "0xd031",
           "vendorID" : "0x3434",
           "productName" : "Keychron Link "
         }
