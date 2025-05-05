@@ -5,6 +5,7 @@ theme = catppuccin-mocha
 font-family = JetBrainsMono Nerd Font 
 font-size = 15
 font-thicken = true
+background-opacity = 0.9
 
 # clipboard
 clipboard-read = allow
