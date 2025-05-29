@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sketchybar --set "$NAME" label="Loading..."
+sketchybar --set "$NAME" label="......."
 
 WEATHER_DATA=$(curl -s -m 5 "wttr.in/?format=%t")
 CURL_STATUS=$?
