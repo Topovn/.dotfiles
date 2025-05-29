@@ -23,8 +23,8 @@
     "gpu",
     "memory",
     "disk",
-    "battery",
-    "poweradapter",
+    // "battery",
+    // "poweradapter",
     // "locale",
     "break",
     "colors"

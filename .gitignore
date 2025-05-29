@@ -7,6 +7,9 @@ tmp/
 .zcompdump
 .zcompcache/
 __pycache__/
+wireshark/
 raycast/
 fish/
 uv/
+cmus/
+ncspot/
