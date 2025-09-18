@@ -29,7 +29,7 @@ update_ip() {
   fi
 
   # Update the sketchybar item
-  sketchybar --set "$NAME" icon="􀙇" label="$NETWORK_NAME | $IP_ADDRESS"
+  sketchybar --set "$NAME" icon="􀙇" label="$NETWORK_NAME"
   #sketchybar --set "$NAME" icon="􀙇" label="$IP_ADDRESS"
 }
 
