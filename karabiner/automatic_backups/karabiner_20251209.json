@@ -8,59 +8,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Ctrl/Option/Command + Tab Change",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": ["command"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": ["option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": ["control"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": ["option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change shift + delete to forward delete (rev 2)",
                         "manipulators": [
                             {
@@ -78,7 +25,6 @@
                     },
                     {
                         "description": "Ctrl+Esc => Open Launchpad",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -128,7 +74,6 @@
                     },
                     {
                         "description": "Ctrl+Shift+Esc => Open Activity Monitor",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -173,7 +118,6 @@
                     },
                     {
                         "description": "Ctrl+R => Cmd+R (Reload) (Only in browsers)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -266,7 +210,6 @@
                     },
                     {
                         "description": "Ctrl+I => Cmd+I (Italic)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -302,7 +245,6 @@
                     },
                     {
                         "description": "Ctrl+T => Cmd+T (New tab)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -338,7 +280,6 @@
                     },
                     {
                         "description": "Ctrl+B => Cmd+B (Bold)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -432,7 +373,6 @@
                     },
                     {
                         "description": "Ctrl+W => Cmd+W (Close)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -493,7 +433,6 @@
                     },
                     {
                         "description": "Ctrl+N => Cmd+N (New)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -554,7 +493,6 @@
                     },
                     {
                         "description": "Ctrl+F => Cmd+F (Find)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -670,7 +608,6 @@
                     },
                     {
                         "description": "Ctrl+S => Cmd+S (Save)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -731,7 +668,6 @@
                     },
                     {
                         "description": "Ctrl+A => Cmd+A (Select all)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -792,7 +728,6 @@
                     },
                     {
                         "description": "Ctrl+Z => Cmd+Z (Undo)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
