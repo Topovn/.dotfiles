@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 *.log
+.vscode/
 tmp/
 .zsh_sessions/
 .zsh_history
@@ -19,3 +20,17 @@ rstudio/
 github-copilot/
 configstore/
 emacs/
+fd/
+MusicBrainz/
+rstudio/
+xnconvert/
+cagent/
+cava/
+btop/
+llmfit/
+glow/
+htop/
+lsd/
+mpv/
+nicotine/
+thefuck/
