@@ -3,7 +3,6 @@
     "groups" : [
       {
         "color" : "#EB5545",
-        "disabled" : true,
         "id" : "F80BD5DE-9681-45B0-B9D9-5FB8ADEA0818",
         "name" : "Automation",
         "symbol" : "autostartstop"
@@ -206,14 +205,12 @@
       },
       {
         "color" : "#6BD35F",
-        "disabled" : true,
         "id" : "43ED6EC7-86DD-4C96-9431-DF9388ACC733",
         "name" : "Files & Folders",
         "symbol" : "folder"
       },
       {
         "color" : "#3984F7",
-        "disabled" : true,
         "id" : "B2A324C6-F678-4F83-A620-63B401486EDD",
         "name" : "Rebinding",
         "symbol" : "app.connected.to.app.below.fill",
@@ -394,35 +391,30 @@
       },
       {
         "color" : "#B263EA",
-        "disabled" : true,
         "id" : "827CFC2B-33E5-44BC-8064-37B10B783656",
         "name" : "Shortcuts",
         "symbol" : "flowchart"
       },
       {
         "color" : "#5D5FDE",
-        "disabled" : true,
         "id" : "C9B31430-8565-48DA-990C-D99BC624B7EC",
         "name" : "ShellScripts",
         "symbol" : "terminal"
       },
       {
         "color" : "#A78F6D",
-        "disabled" : true,
         "id" : "7A323D54-A975-410E-9415-E786440D3BCC",
         "name" : "System",
         "symbol" : "laptopcomputer"
       },
       {
         "color" : "#98989D",
-        "disabled" : true,
         "id" : "05C06804-880C-4D44-BBB8-33CF64CBFD61",
         "name" : "Websites",
         "symbol" : "safari"
       },
       {
         "color" : "#3984F7",
-        "disabled" : true,
         "id" : "BFDDB2C1-8379-4842-828A-BB299EC3881C",
         "name" : "Mail",
         "rule" : {
