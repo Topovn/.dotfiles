@@ -53,7 +53,7 @@ source "$ITEM_DIR/cpu.sh"
 #################### Finalizing Setup ####################
 
 sketchybar --hotload true
-
+# sketchybar --default display=all
 sketchybar --update
 
 echo "sketchybar configuration loaded.."

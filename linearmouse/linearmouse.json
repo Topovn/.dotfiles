@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.2",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.3",
   "schemes" : [
     {
       "if" : {
@@ -44,8 +44,9 @@
         }
       },
       "pointer" : {
-        "acceleration" : 1.7,
-        "disableAcceleration" : true
+        "acceleration" : 0.6,
+        "disableAcceleration" : true,
+        "redirectsToScroll" : false
       },
       "scrolling" : {
         "acceleration" : {
