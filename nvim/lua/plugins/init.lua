@@ -13,9 +13,6 @@ return {
             'nvim-tree/nvim-web-devicons' -- optional
         }
     }, {
-        "nvim-treesitter/nvim-treesitter",
-        opts = {ensure_installed = {"vim", "lua", "vimdoc", "html", "css"}}
-    }, {
         'nvimdev/dashboard-nvim',
         event = 'VimEnter',
         config = function()
