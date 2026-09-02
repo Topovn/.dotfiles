@@ -3,10 +3,66 @@
         "enable_notification_window": false,
         "show_in_menu_bar": false
     },
+    "machine_specific": { "krbn-5bc3cf08-47e4-4890-b5de-e3f8343c1dfe": { "external_editor_path": "/Applications/CotEditor.app" } },
     "profiles": [
         {
             "complex_modifications": {
                 "rules": [
+                    {
+                        "description": "Change Command + left/right to home/end",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "home" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "end" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change Command + up/down to home/end",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "home" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "end" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "Ctrl/Option/Command + Tab Change",
                         "manipulators": [
@@ -77,8 +133,7 @@
                         ]
                     },
                     {
-                        "description": "Ctrl+Esc => Open Launchpad",
-                        "enabled": false,
+                        "description": "Cmd+Esc => Open Launchpad",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -114,7 +169,7 @@
                                 ],
                                 "from": {
                                     "key_code": "escape",
-                                    "modifiers": { "mandatory": ["control"] }
+                                    "modifiers": { "mandatory": ["command"] }
                                 },
                                 "to": [
                                     {
@@ -127,8 +182,7 @@
                         ]
                     },
                     {
-                        "description": "Ctrl+Shift+Esc => Open Activity Monitor",
-                        "enabled": false,
+                        "description": "Cmd+Shift+Esc => Open Activity Monitor",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -164,7 +218,7 @@
                                 ],
                                 "from": {
                                     "key_code": "escape",
-                                    "modifiers": { "mandatory": ["control", "shift"] }
+                                    "modifiers": { "mandatory": ["command", "shift"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Activity Monitor.app'" }],
                                 "type": "basic"
@@ -173,7 +227,6 @@
                     },
                     {
                         "description": "Ctrl+R => Cmd+R (Reload) (Only in browsers)",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -365,64 +418,6 @@
                                 "to": [
                                     {
                                         "key_code": "b",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Home => Cmd+Left arrow (Move cursor to beginning of line)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.macports\\.X11$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^tv\\.parsec\\.www$"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": { "key_code": "home" },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "End => Cmd+Right arrow (Move cursor to end of line)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^org\\.macports\\.X11$",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^co\\.zeit\\.hyper$",
-                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
-                                            "^com\\.microsoft\\.rdc\\.macos$",
-                                            "^tv\\.parsec\\.www$"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
-                                "from": { "key_code": "end" },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
                                         "modifiers": ["command"]
                                     }
                                 ],
@@ -918,23 +913,6 @@
             },
             "devices": [
                 {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 544,
-                        "vendor_id": 13364
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "left_command" }]
-                        }
-                    ]
-                },
-                {
                     "identifiers": { "is_keyboard": true },
                     "simple_modifications": [
                         {
@@ -944,6 +922,27 @@
                         {
                             "from": { "key_code": "left_command" },
                             "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 544,
+                        "vendor_id": 13364
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_control" }]
                         }
                     ]
                 }

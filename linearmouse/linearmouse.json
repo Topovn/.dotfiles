@@ -1,7 +1,38 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.3",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.4",
   "schemes" : [
     {
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : {
+              "keyPress" : [
+                "command",
+                "="
+              ]
+            },
+            "command" : true,
+            "control" : false,
+            "option" : false,
+            "scroll" : "up",
+            "shift" : false
+          },
+          {
+            "action" : {
+              "keyPress" : [
+                "command",
+                "-"
+              ]
+            },
+            "command" : true,
+            "control" : false,
+            "option" : false,
+            "scroll" : "down",
+            "shift" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
       "if" : {
         "device" : {
           "category" : "mouse",
@@ -12,19 +43,24 @@
         }
       },
       "pointer" : {
-        "acceleration" : 0,
-        "disableAcceleration" : false,
-        "speed" : 0.75
+        "acceleration" : 1.5,
+        "disableAcceleration" : true,
+        "speed" : 0.5
       },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
         },
         "distance" : {
-          "vertical" : 3
+          "vertical" : "115.6px"
         },
         "reverse" : {
           "vertical" : true
+        },
+        "smoothed" : {
+          "vertical" : {
+            "enabled" : false
+          }
         },
         "speed" : {
           "vertical" : 0
@@ -33,7 +69,7 @@
     },
     {
       "buttons" : {
-        "universalBackForward" : false
+        "universalBackForward" : true
       },
       "if" : {
         "device" : {
@@ -44,16 +80,17 @@
         }
       },
       "pointer" : {
-        "acceleration" : 0.6,
+        "acceleration" : 0.7,
         "disableAcceleration" : true,
-        "redirectsToScroll" : false
+        "redirectsToScroll" : false,
+        "speed" : 0.69
       },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
         },
         "distance" : {
-          "vertical" : "100px"
+          "vertical" : "107.8px"
         },
         "reverse" : {
           "vertical" : true
