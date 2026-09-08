@@ -9,56 +9,199 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change Command + left/right to home/end",
+                        "description": "End => Cmd+Right arrow (Move cursor to end of line)",
                         "enabled": false,
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["command"],
-                                        "optional": ["any"]
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
                                     }
-                                },
-                                "to": [{ "key_code": "home" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["command"],
-                                        "optional": ["any"]
+                                ],
+                                "from": { "key_code": "end" },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["command"]
                                     }
-                                },
-                                "to": [{ "key_code": "end" }],
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Change Command + up/down to home/end",
+                        "description": "Shift+End => Cmd+Shift+Right arrow (Move cursor to end of line with selection)",
+                        "enabled": false,
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["command"],
-                                        "optional": ["any"]
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
                                     }
+                                ],
+                                "from": {
+                                    "key_code": "end",
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [{ "key_code": "home" }],
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["command", "shift"]
+                                    }
+                                ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+End, Ctrl+Shift+End => Cmd+down arrow, Cmd+Shift+down arrow (Move cursor to end of file with and without selection)",
+                        "enabled": false,
+                        "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "down_arrow",
+                                    "key_code": "end",
                                     "modifiers": {
-                                        "mandatory": ["command"],
-                                        "optional": ["any"]
+                                        "mandatory": ["control"],
+                                        "optional": ["shift"]
                                     }
                                 },
-                                "to": [{ "key_code": "end" }],
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Home => Cmd+Left arrow (Move cursor to beginning of line)",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": { "key_code": "home" },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Shift+Home => Cmd+Shift+Left arrow (Move cursor to beginning of line with selection)",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "home",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["command", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+Home, Ctrl+Shift+Home => Cmd+Up arrow, Cmd+Shift+Up arrow (Move cursor to beginning of file with and without selection)",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.macports\\.X11$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^tv\\.parsec\\.www$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "home",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -226,7 +369,64 @@
                         ]
                     },
                     {
+                        "description": "Change Command + left/right to home/end",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "home" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "end" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change Command + up/down to home/end",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "home" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "end" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl+R => Cmd+R (Reload) (Only in browsers)",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -981,7 +1181,7 @@
                     }
                 ]
             },
-            "name": "Genshin",
+            "name": "Games",
             "simple_modifications": [
                 {
                     "from": { "key_code": "left_option" },
