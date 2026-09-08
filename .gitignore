@@ -1,6 +1,7 @@
 *.log
 .DS_Store
 .idea
+.claude/
 .vscode/
 .zcompcache/
 .zcompdump
